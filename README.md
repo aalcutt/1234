@@ -1,7 +1,7 @@
 # 1234
 
 <p>
-  A simple puzzle game. Play at <a href="http://aalcutt.github.io/1234/">1234</a>.
+  A simple puzzle game. <a href="http://aalcutt.github.io/1234/">Play it here</a>.
 </p>
 
 <h2>How to play</h2>
