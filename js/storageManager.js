@@ -1,3 +1,23 @@
+window.fakeStorage = {
+  _data: {},
+
+  setItem: function (id, val) {
+    return this._data[id] = String(val);
+  },
+
+  getItem: function (id) {
+    return this._data.hasOwnProperty(id) ? this._data[id] : undefined;
+  },
+
+  removeItem: function (id) {
+    return delete this._data[id];
+  },
+
+  clear: function () {
+    return this._data = {};
+  }
+};
+
 function StorageManager(){
   var supported = this.localStorageSupported();
   this.storage = supported ? window.localStorage : window.fakeStorage;
@@ -8,15 +28,14 @@ StorageManager.prototype.getSavedScores = function(){
   return saved != null ? saved : {};
 }
 
-StorageManager.prototype.getTodaysBest = function(){
-  var saved = this.getSavedScores();
-  var today = d.toDateString();
-  return saved[today] != null ? saved[today] : null;
+StorageManager.prototype.getPuzzlesBest = function(seed){
+   var saved = this.getSavedScores();
+  return saved[seed] != null ? saved[seed] : null;
 }
 
-StorageManager.prototype.setTodaysBest = function(score){
+StorageManager.prototype.setPuzzlesBest = function(seed, score){
   var saved = this.getSavedScores();
-  saved[d.toDateString()] = score;
+  saved[seed] = score;
   this.storage.setItem('savedScores', JSON.stringify(saved));
 }
 
