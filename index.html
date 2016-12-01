@@ -3,6 +3,7 @@
   <title>1234</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="style/style.css" />
 
 
@@ -23,18 +24,14 @@
       <div class="container-fluid">
         <div class="heading row">
           <h1 class="title">1234</h1>
-          <div class="best-score-container-top">
-            BEST
-            <div class="best-score-container">0</div>
+          <div class="scores">
+            <div class="score-container">Total: 0</div>
+            <div class="best-score-container">Lowest: 0</div>
+            <div class="target-score-container" style="display:none">0</div>
           </div>
-          <div class="score-container-top">
-            SCORE
-            <div class="score-container">0</div>
-          </div>
-          <div class="target-score-container" style="display:none">0</div>
         </div>
           <div class="above-game row">
-            <span class="intro">Try to get the lowest score possible.</span>
+            <span class="intro">A new puzzle every day.</span>
             <span class="randompuzzle-button btn btn-default">Random Puzzle</span>
             <span class="todayspuzzle-button btn btn-default">Todays Puzzle</span>
           </div>
@@ -58,18 +55,10 @@
 
           <div class="help-container container-fluid">
             <p>
-              <strong>How to play:</strong> Tiles consist of a point value and a direction.
-              Clicking a tile scores the number of points on the tile and then clears that
-              number of spaces from board. Try to get as few points as possible. There is
+              <strong>How to play:</strong> Clicking a tile collects the number of marks displayed while
+              eliminating that number of tiles in the shown direction. Try to eliminate the tiles efficiently
+              and get the lowest mark possible.
             </p>
-
-            <ul>
-              <li>Less than 52. Amazing!</li>
-              <li>53 to 60. Great!</li>
-              <li>61 to 65. Average.</li>
-              <li>66+. Better luck next time.</li>
-            </ul>
-
           </div>
         </div>
       </div>
